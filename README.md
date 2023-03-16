@@ -9,7 +9,7 @@
 - [**`Redux-Toolkit`**](https://redux-toolkit.js.org/)
 - [**`Vite`**](https://vitejs.dev/)
 
-**`Vite`** команды:    
+Управление **`Vite`**:
 ```json
     "dev": "vite",
     "build": "tsc && vite build",
