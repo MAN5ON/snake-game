@@ -1,0 +1,25 @@
+.header {
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.clue {
+	animation: jump 1s infinite;
+}
+
+.inGame {
+	display: inherit;
+	flex-direction: column;
+}
+
+@keyframes jump {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
