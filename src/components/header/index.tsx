@@ -4,7 +4,7 @@ import { RootState } from "../../store/store";
 
 export const Header = () => {
 	const play = useSelector((state: RootState) => state.snake.startPlay);
-	const count = useSelector((state: RootState) => state.snake.count);
+	const score = useSelector((state: RootState) => state.snake.score);
 	const record = useSelector((state: RootState) => state.snake.record);
 	return (
 		<div className={s.header}>
@@ -16,7 +16,7 @@ export const Header = () => {
 			) : (
 				<div className={s.inGame}>
 					<span>Current local record {record}</span>
-					<span>Current score: {count}</span>
+					<span>Current score: {score}</span>
 				</div>
 			)}
 		</div>

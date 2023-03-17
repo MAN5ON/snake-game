@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export interface CounterState {
 	startPlay: boolean;
-	count: number;
+	score: number;
 	record: number;
 }
 
 const initialState: CounterState = {
 	startPlay: false,
-	count: 0,
+	score: 0,
 	record: 0,
 };
 
@@ -20,7 +20,7 @@ export const snakeSlice = createSlice({
 			state.startPlay = !state.startPlay;
 		},
 		counter: (state) => {
-			state.count += 1;
+			state.score += 1;
 		},
 	},
 });
