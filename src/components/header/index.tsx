@@ -21,11 +21,11 @@ export const Header = () => {
 
 			{!play ? (
 				<span className={s.clue}>
-					(Use "WASD" or Arrows to control)
+					<span>Current local record: {record}</span>
 				</span>
 			) : (
 				<div className={s.inGame}>
-					<span>Current local record {record}</span>
+					<span>Current local record: {record}</span>
 					<span>Current score: {score}</span>
 				</div>
 			)}

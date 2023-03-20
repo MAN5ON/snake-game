@@ -11,6 +11,7 @@ export interface CounterState {
 		canvasH: number;
 		canvasW: number;
 	};
+	speed: number
 }
 
 const initialState: CounterState = {
@@ -22,6 +23,7 @@ const initialState: CounterState = {
 		canvasH: 450,
 		canvasW: 450,
 	},
+	speed: 1,
 };
 
 export const snakeSlice = createSlice({
@@ -35,9 +37,19 @@ export const snakeSlice = createSlice({
 			state.openSettings = !state.openSettings;
 		},
 
+		setSize: (state, action) =>{
+			state.canvas.canvasH = action.payload;
+			state.canvas.canvasW = action.payload;
+		},
+
+		setSpeed: (state, action) => {
+			state.speed = action.payload;
+		},
+		
 		counter: (state) => {
 			state.score += 1;
 		},
+
 		upMove: () => {
 			console.log("up");
 		},
@@ -56,7 +68,7 @@ export const snakeSlice = createSlice({
 	},
 });
 
-export const { startPlay, openSettings, upMove, leftMove, downMove, rightMove } =
+export const { startPlay, openSettings, setSize, setSpeed, upMove, leftMove, downMove, rightMove } =
 	snakeSlice.actions;
 
 export default snakeSlice.reducer;
